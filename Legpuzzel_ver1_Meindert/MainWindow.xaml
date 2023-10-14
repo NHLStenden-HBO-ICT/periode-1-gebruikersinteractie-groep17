@@ -8,8 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Rectangle Fill="LightPink"/>
-        <Image HorizontalAlignment="Center" Height="100"  VerticalAlignment="Center" Width="100" Source="C:\Users\meind\OneDrive - NHL Stenden\Echte_games\Legpuzzel_ver1_Meindert\logo_carrot_gems.png" />
+        <Image HorizontalAlignment="Center" Height="100"  VerticalAlignment="Center" Width="100" Source="Pictures\logo_carrot_gems.png" />
         <Button Name="MuziekKnop" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Content="Muziek" Click="MuziekKnop_Click"/>
-        <MediaElement x:Name="mediaElement" Source="C:\Users\meind\OneDrive - NHL Stenden\Echte_games\Legpuzzel_ver1_Meindert\Piano-Concerto-no.-21-in-C-major-K.-467-II.-Andante(chosic.com).mp3" LoadedBehavior="Manual" />
+        <MediaElement x:Name="mediaElement" Source="muziek\Piano-Concerto-no.-21-in-C-major-K.-467-II.-Andante(chosic.com).mp3" LoadedBehavior="Manual" />
     </Grid>
 </Window>

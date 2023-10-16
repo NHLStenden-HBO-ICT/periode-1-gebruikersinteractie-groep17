@@ -6,10 +6,72 @@
         xmlns:local="clr-namespace:Legpuzzel_ver1_Meindert"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ImageBrush x:Key="MusicOff" ImageSource="\Pictures\MusicOff.png" />
+        <ImageBrush x:Key="MusicOn"  ImageSource="\Pictures\MusicOn.png" />
+        <ImageBrush x:Key="MusicOffHover" ImageSource="\Pictures\MusicOffHover.png" />
+        <ImageBrush x:Key="MusicOnHover"  ImageSource="\Pictures\MusicOnHover.png" />
+
+     
+
+        <Style x:Key="NoBugMusicOffStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource MusicOff}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+                
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource MusicOffHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="NoBugMusicOnStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource MusicOn}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource MusicOnHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+
     <Grid>
         <Rectangle Fill="LightPink"/>
-        <Image HorizontalAlignment="Center" Height="100"  VerticalAlignment="Center" Width="100" Source="Pictures\logo_carrot_gems.png" />
-        <Button Name="MuziekKnop" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Content="Muziek" Click="MuziekKnop_Click"/>
-        <MediaElement x:Name="mediaElement" Source="muziek\Piano-Concerto-no.-21-in-C-major-K.-467-II.-Andante(chosic.com).mp3" LoadedBehavior="Manual" />
+        <Image x:Name="LOGO" HorizontalAlignment="Center" Height="100"  VerticalAlignment="Center" Width="100" Source="/Pictures/logo_carrot_gems.png" />
+        <Button Name="MuziekKnop" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Click="MuziekKnop_Click"  BorderBrush="Transparent" Style="{StaticResource NoBugMusicOffStyle}"/>
+
+        <MediaElement x:Name="mediaElement" Source="C:\Users\meind\OneDrive\periode-1-gebruikersinteractie-groep17-main (1)\periode-1-gebruikersinteractie-groep17-main\Legpuzzel_ver1_Meindert\muziek\De_muziek.mp3" LoadedBehavior="Manual"  MediaEnded="MediaElement_MediaEnded"/>
+        <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" Content="Exit"/>
+
+
     </Grid>
 </Window>

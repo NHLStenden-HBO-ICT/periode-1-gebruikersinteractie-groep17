@@ -69,7 +69,7 @@
         <Image x:Name="LOGO" HorizontalAlignment="Center" Height="100"  VerticalAlignment="Center" Width="100" Source="/Pictures/logo_carrot_gems.png" />
         <Button Name="MuziekKnop" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Click="MuziekKnop_Click"  BorderBrush="Transparent" Style="{StaticResource NoBugMusicOffStyle}"/>
 
-        <MediaElement x:Name="mediaElement" Source="C:\Users\meind\OneDrive\periode-1-gebruikersinteractie-groep17-main (1)\periode-1-gebruikersinteractie-groep17-main\Legpuzzel_ver1_Meindert\muziek\De_muziek.mp3" LoadedBehavior="Manual"  MediaEnded="MediaElement_MediaEnded"/>
+        <MediaElement x:Name="mediaElement" Source="muziek\De_muziek.mp3" LoadedBehavior="Manual"  MediaEnded="MediaElement_MediaEnded"/>
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" Content="Exit"/>
 
 

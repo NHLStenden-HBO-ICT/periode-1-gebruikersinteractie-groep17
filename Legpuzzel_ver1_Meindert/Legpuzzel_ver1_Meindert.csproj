@@ -17,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="muziek\De_muziek.mp3">
+    <Content Include="muziek\De_muziek.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
     <Resource Include="Pictures\logo_carrot_gems.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

@@ -22,16 +22,27 @@ namespace Legpuzzel_ver1_Meindert
     
     public partial class MainWindow : Window
     {
-        bool Moff = false;
+        bool Moff = true;
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            // When the media ends, restart it to create a looping effect
+            mediaElement.Position = TimeSpan.Zero;
+            mediaElement.Play();
+        }
         private void MuziekKnop_Click(object sender, RoutedEventArgs e)
         {
-            if (Moff == false) { mediaElement.Play(); Moff = true; }
-            else { mediaElement.Stop(); Moff = false; }
+            if (Moff) { mediaElement.Play();  MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style;  }
+            else { mediaElement.Stop(); MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
+            Moff = !Moff;
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

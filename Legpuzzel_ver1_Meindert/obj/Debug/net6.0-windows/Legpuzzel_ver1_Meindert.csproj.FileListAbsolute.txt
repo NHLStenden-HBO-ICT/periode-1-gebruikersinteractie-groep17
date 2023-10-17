@@ -60,3 +60,4 @@ C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.pdb
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.genruntimeconfig.cache
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\ref\Legpuzzel_ver1_Meindert.dll
+C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\muziek\De_Muziek2.mp3

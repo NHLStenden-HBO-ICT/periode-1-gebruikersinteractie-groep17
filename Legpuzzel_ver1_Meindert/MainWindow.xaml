@@ -11,8 +11,10 @@
         <ImageBrush x:Key="MusicOn"  ImageSource="\Pictures\MusicOn.png" />
         <ImageBrush x:Key="MusicOffHover" ImageSource="\Pictures\MusicOffHover.png" />
         <ImageBrush x:Key="MusicOnHover"  ImageSource="\Pictures\MusicOnHover.png" />
+        <ImageBrush x:Key="OffButton" ImageSource="\Pictures\OffButton.png" />
+        <ImageBrush x:Key="OffButtonHover"  ImageSource="\Pictures\OffButtonHover.png" />
 
-     
+
 
         <Style x:Key="NoBugMusicOffStyle" TargetType="Button">
             <Setter Property="Background" Value="{StaticResource MusicOff}" />
@@ -61,6 +63,30 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+
+        <Style x:Key="NoBugOffButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource OffButton}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+        BorderBrush="{TemplateBinding BorderBrush}"
+        BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource OffButtonHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
     
 
@@ -69,8 +95,8 @@
         <Image x:Name="LOGO" HorizontalAlignment="Center" Height="100"  VerticalAlignment="Center" Width="100" Source="/Pictures/logo_carrot_gems.png" />
         <Button Name="MuziekKnop" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Click="MuziekKnop_Click"  BorderBrush="Transparent" Style="{StaticResource NoBugMusicOffStyle}"/>
 
-        <MediaElement x:Name="mediaElement" Source="muziek\De_muziek.mp3" LoadedBehavior="Manual"  MediaEnded="MediaElement_MediaEnded"/>
-        <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" Content="Exit"/>
+        <MediaElement x:Name="mediaElement" Source="muziek\De_muziek2.mp3" LoadedBehavior="Manual"  MediaEnded="MediaElement_MediaEnded"/>
+        <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" Content="Exit" BorderBrush="Transparent" Style="{StaticResource NoBugOffButtonStyle}"/>
 
 
     </Grid>

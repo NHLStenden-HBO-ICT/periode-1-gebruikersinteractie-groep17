@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="muziek\De_muziek.mp3" />
     <None Remove="muziek\De_Muziek2.mp3" />
     <None Remove="Pictures\logo_carrot_gems.png" />
     <None Remove="Pictures\MusicOff.png" />
@@ -20,9 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="muziek\De_muziek.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="muziek\De_Muziek2.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

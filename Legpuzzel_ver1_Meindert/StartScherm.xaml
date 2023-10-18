@@ -119,7 +119,7 @@
     
 
     <Grid>
-        <Rectangle Fill="LightPink"/>
+        <Rectangle Fill="#F5F5F5"/>
         <Image x:Name="LOGO" HorizontalAlignment="Center" Height="100"  VerticalAlignment="Center" Width="100" Source="/Pictures/logo_carrot_gems.png" />
         <Button Name="MuziekKnop" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Click="MuziekKnop_Click"  BorderBrush="Transparent" Style="{StaticResource NoBugMusicOffStyle}"/>
 

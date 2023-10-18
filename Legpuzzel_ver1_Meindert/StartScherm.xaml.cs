@@ -49,7 +49,7 @@ namespace Legpuzzel_ver1_Meindert
         {
             NaStartscherm sc = new NaStartscherm();
             sc.Visibility = Visibility.Visible;
-            this.Close();
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

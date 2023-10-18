@@ -19,9 +19,15 @@ namespace Legpuzzel_ver1_Meindert
     /// </summary>
     public partial class NaStartscherm : Window
     {
+        public string PlayerName1 { get; set; }
         public NaStartscherm()
         {
             InitializeComponent();
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            PlayerName1 = txtPlayerName1.Text;
         }
     }
 }

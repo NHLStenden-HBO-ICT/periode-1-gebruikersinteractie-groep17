@@ -44,5 +44,10 @@ namespace Legpuzzel_ver1_Meindert
         {
             Application.Current.Shutdown();
         }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

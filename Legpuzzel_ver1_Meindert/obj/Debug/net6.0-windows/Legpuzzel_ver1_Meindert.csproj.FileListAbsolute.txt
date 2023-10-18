@@ -39,17 +39,14 @@ C:\Users\meind\OneDrive\periode-1-gebruikersinteractie-groep17-main (1)\periode-
 C:\Users\meind\OneDrive\periode-1-gebruikersinteractie-groep17-main (1)\periode-1-gebruikersinteractie-groep17-main\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.genruntimeconfig.cache
 C:\Users\meind\OneDrive\periode-1-gebruikersinteractie-groep17-main (1)\periode-1-gebruikersinteractie-groep17-main\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\ref\Legpuzzel_ver1_Meindert.dll
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.exe
-C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\muziek\De_muziek.mp3
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.deps.json
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.runtimeconfig.json
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.dll
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.pdb
-C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert_Content.g.cs
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert_MarkupCompile.cache
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert_MarkupCompile.lref
-C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.g.resources
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.AssemblyInfoInputs.cache
@@ -85,3 +82,7 @@ C:\Users\nikol\OneDrive\Git Nikolaj\periode-1-gebruikersinteractie-groep17\Legpu
 C:\Users\nikol\OneDrive\Git Nikolaj\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\NaStartscherm.baml
 C:\Users\nikol\OneDrive\Git Nikolaj\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\StartScherm.g.cs
 C:\Users\nikol\OneDrive\Git Nikolaj\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\StartScherm.baml
+C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\NaStartscherm.g.cs
+C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\StartScherm.g.cs
+C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\NaStartscherm.baml
+C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\StartScherm.baml

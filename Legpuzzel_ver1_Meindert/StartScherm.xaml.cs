@@ -14,30 +14,35 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace Legpuzzel_ver1_Meindert
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    
+  
+
     public partial class StartScherm : Window
     {
-        bool Moff = true;
+
+        public bool Moff = true;
         public StartScherm()
         {
             InitializeComponent();
         }
         private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
         {
-            // When the media ends, restart it to create a looping effect
+            
             mediaElement.Position = TimeSpan.Zero;
             mediaElement.Play();
         }
         private void MuziekKnop_Click(object sender, RoutedEventArgs e)
         {
+            
             if (Moff) { mediaElement.Play();  MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style;  }
             else { mediaElement.Stop(); MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
             Moff = !Moff;
+            
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -49,7 +54,7 @@ namespace Legpuzzel_ver1_Meindert
         {
             NaStartscherm sc = new NaStartscherm();
             sc.Visibility = Visibility.Visible;
-            this.Visibility = Visibility.Hidden;
+            this.Visibility = Visibility.Collapsed;
         }
     }
 }

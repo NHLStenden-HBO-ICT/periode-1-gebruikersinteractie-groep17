@@ -29,5 +29,17 @@ namespace Legpuzzel_ver1_Meindert
         {
             PlayerName1 = txtPlayerName1.Text;
         }
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void BackArrow_Click(object sender, RoutedEventArgs e)
+        {
+            StartScherm sc = new StartScherm();
+            sc.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
+            
+        }
     }
 }

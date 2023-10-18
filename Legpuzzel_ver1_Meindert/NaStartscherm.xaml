@@ -6,9 +6,152 @@
         xmlns:local="clr-namespace:Legpuzzel_ver1_Meindert"
         mc:Ignorable="d"
         Title="NaStartscherm" Height="450" Width="800">
+
+    <Window.Resources>
+        <ImageBrush x:Key="MusicOff" ImageSource="\Pictures\MusicOff.png" />
+        <ImageBrush x:Key="MusicOn"  ImageSource="\Pictures\MusicOn.png" />
+        <ImageBrush x:Key="MusicOffHover" ImageSource="\Pictures\MusicOffHover.png" />
+        <ImageBrush x:Key="MusicOnHover"  ImageSource="\Pictures\MusicOnHover.png" />
+        <ImageBrush x:Key="OffButton" ImageSource="\Pictures\OffButton.png" />
+        <ImageBrush x:Key="OffButtonHover"  ImageSource="\Pictures\OffButtonHover.png" />
+        <ImageBrush x:Key="BackArrow" ImageSource="\Pictures\BackArrow.png" />
+        <ImageBrush x:Key="BackArrowHover"  ImageSource="\Pictures\BackArrowHover.png" />
+
+
+
+        <Style x:Key="NoBugMusicOffStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource MusicOff}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource MusicOffHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="NoBugMusicOnStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource MusicOn}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource MusicOnHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="NoBugOffButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource OffButton}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+        BorderBrush="{TemplateBinding BorderBrush}"
+        BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource OffButtonHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="Buttons" TargetType="Button">
+            <Setter Property="Background" Value="#FF6666"/>
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#F5F5F5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="#FF6666"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    CornerRadius="30">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF9966"/>
+                                <Setter Property="BorderBrush" Value="#FF9966"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="BackArrowStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource BackArrow}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                 BorderBrush="{TemplateBinding BorderBrush}"
+                 BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource BackArrowHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
     <Grid>
         <TextBlock Text="Vul je naam in:" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="150" Margin="150"/>
         <TextBox x:Name="txtPlayerName1" Height="30" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="150 60 0 0"/>
-        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="170" Margin="0 250 0 0" Click="StartButton_Click"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="170" Margin="0 250 0 0" Click="StartButton_Click" />
+        <Button x:Name="BackArrow" HorizontalAlignment="Left" VerticalAlignment="Top" Height="80 " Width="80" Click="BackArrow_Click" Style="{StaticResource BackArrowStyle}" BorderBrush="Transparent"/>
+        <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugOffButtonStyle}"/>
+
     </Grid>
 </Window>

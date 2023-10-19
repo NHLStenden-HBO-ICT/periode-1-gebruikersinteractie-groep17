@@ -27,7 +27,10 @@ namespace Legpuzzel_ver1_Meindert
         {
             InitializeComponent();
             startscherm = ss;
+
             this.Moff = Moff;
+            if (Moff) { this.MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
+            else {  this.MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style; }
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
@@ -43,7 +46,6 @@ namespace Legpuzzel_ver1_Meindert
             {
                 PlayerName2 = "Speler 2";
             }
-            startscherm.StopMuziek(); 
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
@@ -53,9 +55,20 @@ namespace Legpuzzel_ver1_Meindert
         private void BackArrow_Click(object sender, RoutedEventArgs e)
         {
             //StartScherm sc = new StartScherm();
+           
             startscherm.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
             
+        }
+        private void MuziekKnop_Click(object sender, RoutedEventArgs e)
+        {
+
+            startscherm.ToggleMusicLocally();
+            Moff = !Moff;
+            if (Moff) { this.MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
+            else { this.MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style; }
+
+
         }
     }
 }

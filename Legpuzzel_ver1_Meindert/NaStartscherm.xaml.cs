@@ -64,11 +64,16 @@ namespace Legpuzzel_ver1_Meindert
         {
 
             startscherm.ToggleMusicLocally();
-            Moff = !Moff;
+            PublicSwitch();
+            
             if (Moff) { this.MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
             else { this.MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style; }
 
 
+        }
+        public void PublicSwitch()
+        {
+            Moff = !Moff;
         }
     }
 }

@@ -52,9 +52,14 @@ namespace Legpuzzel_ver1_Meindert
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            NaStartscherm sc = new NaStartscherm();
+            NaStartscherm sc = new NaStartscherm(this, Moff);
             sc.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Collapsed;
+        }
+
+        public void StopMuziek()
+        {
+            MessageBox.Show("STOP!");
         }
     } 
 }

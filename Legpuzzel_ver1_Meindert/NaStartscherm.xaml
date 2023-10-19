@@ -148,17 +148,6 @@
             <Setter Property="Foreground" Value="#FFF8F5"/>
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <Border CornerRadius="10">
-
-                            </Border>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
 
         </Style>
 

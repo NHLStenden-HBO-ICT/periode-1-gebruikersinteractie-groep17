@@ -19,11 +19,15 @@ namespace Legpuzzel_ver1_Meindert
     /// </summary>
     public partial class NaStartscherm : Window
     {
+        StartScherm startscherm;
+        bool Moff;
         public string PlayerName1 { get; set; }
         public string PlayerName2 { get; set; }
-        public NaStartscherm()
+        public NaStartscherm(StartScherm ss, bool Moff)
         {
             InitializeComponent();
+            startscherm = ss;
+            this.Moff = Moff;
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
@@ -39,6 +43,7 @@ namespace Legpuzzel_ver1_Meindert
             {
                 PlayerName2 = "Speler 2";
             }
+            startscherm.StopMuziek(); 
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
@@ -47,8 +52,8 @@ namespace Legpuzzel_ver1_Meindert
 
         private void BackArrow_Click(object sender, RoutedEventArgs e)
         {
-            StartScherm sc = new StartScherm();
-            sc.Visibility = Visibility.Visible;
+            //StartScherm sc = new StartScherm();
+            startscherm.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
             
         }

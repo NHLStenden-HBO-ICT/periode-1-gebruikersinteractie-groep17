@@ -24,11 +24,12 @@ namespace Legpuzzel_ver1_Meindert
 
     public partial class StartScherm : Window
     {
-
+       
         public bool Moff = true;
         public StartScherm()
         {
             InitializeComponent();
+        
         }
         private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
         {
@@ -38,11 +39,9 @@ namespace Legpuzzel_ver1_Meindert
         }
         private void MuziekKnop_Click(object sender, RoutedEventArgs e)
         {
-            
-            if (Moff) { mediaElement.Play();  MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style;  }
-            else { mediaElement.Stop(); MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
-            Moff = !Moff;
-            
+            ToggleMusicLocally();
+
+
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -57,9 +56,15 @@ namespace Legpuzzel_ver1_Meindert
             this.Visibility = Visibility.Collapsed;
         }
 
-        public void StopMuziek()
+
+        public void ToggleMusicLocally()
         {
-            MessageBox.Show("STOP!");
+            if (Moff) { this.mediaElement.Play(); }
+            else { this.mediaElement.Stop(); }
+            if (Moff) { MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style; }
+            else { MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
+
+            Moff = !Moff;
         }
     } 
 }

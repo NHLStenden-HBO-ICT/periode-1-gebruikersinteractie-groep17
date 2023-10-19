@@ -155,6 +155,7 @@
     </Window.Resources>
 
     <Grid>
+        <Button Name="MuziekKnop" Margin="0,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Click="MuziekKnop_Click"  BorderBrush="Transparent" Style="{StaticResource NoBugMusicOffStyle}"/>
         <TextBlock Text=" Naam Speler 1:" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="135" Margin="150" Style="{StaticResource TextBlocks}"/>
         <TextBlock Text=" Naam Speler 2:" HorizontalAlignment="Right" VerticalAlignment="Center" Height="30" Width="135" Margin="150" Style="{StaticResource TextBlocks}"/>
         <TextBox x:Name="txtPlayerName1" Height="25" Width="135" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="150 60 0 0"/>

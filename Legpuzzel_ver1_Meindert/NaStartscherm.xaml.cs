@@ -20,6 +20,7 @@ namespace Legpuzzel_ver1_Meindert
     public partial class NaStartscherm : Window
     {
         public string PlayerName1 { get; set; }
+        public string PlayerName2 { get; set; }
         public NaStartscherm()
         {
             InitializeComponent();
@@ -28,6 +29,16 @@ namespace Legpuzzel_ver1_Meindert
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
             PlayerName1 = txtPlayerName1.Text;
+            PlayerName2 = txtPlayerName2.Text;
+            
+            if (string.IsNullOrEmpty(PlayerName1))
+            {
+                PlayerName1 = "Speler 1";
+            }
+            if (string.IsNullOrEmpty(PlayerName2))
+            {
+                PlayerName2 = "Speler 2";
+            }
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {

@@ -56,5 +56,5 @@ namespace Legpuzzel_ver1_Meindert
             sc.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Collapsed;
         }
-    }
+    } 
 }

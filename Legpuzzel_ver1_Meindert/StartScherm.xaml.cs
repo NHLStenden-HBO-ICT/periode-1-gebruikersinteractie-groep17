@@ -40,6 +40,7 @@ namespace Legpuzzel_ver1_Meindert
         private void MuziekKnop_Click(object sender, RoutedEventArgs e)
         {
             ToggleMusicLocally();
+            
 
 
         }
@@ -53,18 +54,18 @@ namespace Legpuzzel_ver1_Meindert
         {
             NaStartscherm sc = new NaStartscherm(this, Moff);
             sc.Visibility = Visibility.Visible;
-            this.Visibility = Visibility.Collapsed;
+            this.Visibility = Visibility.Hidden;
         }
 
 
         public void ToggleMusicLocally()
         {
-            if (Moff) { this.mediaElement.Play(); }
-            else { this.mediaElement.Stop(); }
-            if (Moff) { MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style; }
-            else { MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
-
+            if (Moff) { this.mediaElement.Play(); MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style; }
+            else { this.mediaElement.Stop(); MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
             Moff = !Moff;
+
+
         }
+      
     } 
 }

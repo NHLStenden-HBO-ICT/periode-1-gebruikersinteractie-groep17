@@ -86,3 +86,6 @@ C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\StartScherm.g.cs
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\NaStartscherm.baml
 C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\StartScherm.baml
+C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\PuzzelScherm.g.cs
+C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\PuzzelScherm.baml
+C:\Users\meind\OneDrive - NHL Stenden\GIT\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\App.baml

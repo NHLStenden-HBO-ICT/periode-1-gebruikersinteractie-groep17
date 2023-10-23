@@ -46,6 +46,9 @@ namespace Legpuzzel_ver1_Meindert
             {
                 PlayerName2 = "Speler 2";
             }
+            PuzzelScherm ps = new PuzzelScherm();
+            ps.Visibility = Visibility.Visible;
+            this.Visibility = Visibility.Hidden;
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {

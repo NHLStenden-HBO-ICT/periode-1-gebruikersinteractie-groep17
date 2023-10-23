@@ -19,34 +19,61 @@ namespace Legpuzzel_ver1_Meindert
     /// </summary>
     public partial class PuzzelScherm : Window
     {
+        Dictionary<string, Point> correctPositions = new Dictionary<string, Point>(); //make dictionary with elements and solved positions
+
         public PuzzelScherm()
         {
             InitializeComponent();
+            correctPositions.Add("BlackElement", new Point(400, 0));
+            correctPositions.Add("RedElement", new Point(400, 75));
+            correctPositions.Add("YellowElement", new Point(400, 150));
+
         }
         private bool isDragging = false;
         private Point startPoint;
         private TranslateTransform elementTranslation = new TranslateTransform();
+        private UIElement currentlyDraggedElement = null;
+
+
+
 
         private void DraggableElement_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             isDragging = true;
-            var element = (UIElement)sender;
-            startPoint = e.GetPosition(element);
-            element.CaptureMouse();
+            currentlyDraggedElement = (UIElement)sender;
+
         }
 
         private void DraggableElement_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isDragging)
+            if (isDragging && currentlyDraggedElement == sender)
             {
+                //movement code
                 var element = (UIElement)sender;
                 Point mousePosition = Mouse.GetPosition(null);
-                double mouseX = mousePosition.X;
-                double mouseY = mousePosition.Y;
-                elementTranslation.X = mousePosition.X - 75;
-                elementTranslation.Y = mousePosition.Y - 75;
+             
+                elementTranslation.X = mousePosition.X - 50;
+                elementTranslation.Y = mousePosition.Y - 50;
                 element.RenderTransform = elementTranslation;
 
+                //check if close enough to snap
+                /*
+                Point currentPosition = new Point(elementTranslation.X,elementTranslation.Y);
+                Point ElementCorrectPos = correctPositions[(element as FrameworkElement)?.Name];
+                double distance = CalculateDistance(currentPosition, ElementCorrectPos);
+                
+
+                if (distance < 50)
+                {
+                    elementTranslation.X = ElementCorrectPos.X;
+                    elementTranslation.Y = ElementCorrectPos.Y;
+                    element.RenderTransform = elementTranslation;
+                    isDragging = false;
+                  
+                    element.IsHitTestVisible = false; //stay 
+                   
+                }
+                */
             }
 
         }
@@ -54,12 +81,17 @@ namespace Legpuzzel_ver1_Meindert
 
         private void DraggableElement_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (isDragging)
-            {
-                isDragging = false;
-                var element = (UIElement)sender;
-                element.ReleaseMouseCapture();
-            }
+           
+         isDragging = false;
+         currentlyDraggedElement = null;
+
+            
+        }
+        private double CalculateDistance(Point point1, Point point2)
+        {
+            double dx = point1.X - point2.X;
+            double dy = point1.Y - point2.Y;
+            return Math.Sqrt(dx * dx + dy * dy);
         }
     }
 }

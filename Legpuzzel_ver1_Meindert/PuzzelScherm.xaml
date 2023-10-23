@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:Legpuzzel_ver1_Meindert"
         mc:Ignorable="d"
         Title="PuzzelScherm" Height="450" Width="800">
-    <Canvas Focusable="True" Name="PuzzleCanvas">
+    <Grid>
+        <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugOffButtonStyle}"/>
+
+        <Canvas Focusable="True" Name="PuzzleCanvas">
         <Rectangle Name="BlackElement" IsHitTestVisible="True" Height="100" Width="100" Fill="black"  MouseLeftButtonDown = "DraggableElement_MouseLeftButtonDown" MouseMove="DraggableElement_MouseMove" MouseLeftButtonUp="DraggableElement_MouseLeftButtonUp">
             <Rectangle.RenderTransform>
                 <TranslateTransform X="0" Y="0"/>
@@ -26,4 +29,5 @@
         </Rectangle>
          
     </Canvas>
+    </Grid>
 </Window>

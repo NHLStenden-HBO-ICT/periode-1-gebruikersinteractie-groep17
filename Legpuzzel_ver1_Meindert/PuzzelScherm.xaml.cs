@@ -24,9 +24,9 @@ namespace Legpuzzel_ver1_Meindert
         public PuzzelScherm()
         {
             InitializeComponent();
-            correctPositions.Add("BlackElement", new Point(400, 0));
-            correctPositions.Add("RedElement", new Point(400, 75));
-            correctPositions.Add("YellowElement", new Point(400, 150));
+            correctPositions.Add("BlackElement", new Point(400, 100));
+            correctPositions.Add("RedElement", new Point(400, 200));
+            correctPositions.Add("YellowElement", new Point(400, 300));
 
         }
         private bool isDragging = false;
@@ -50,14 +50,14 @@ namespace Legpuzzel_ver1_Meindert
             {
                 //movement code
                 var element = (UIElement)sender;
-                Point mousePosition = Mouse.GetPosition(null);
-             
+                Point mousePosition = Mouse.GetPosition(PuzzleCanvas);
+                var elementTranslation = element.RenderTransform as TranslateTransform;
                 elementTranslation.X = mousePosition.X - 50;
                 elementTranslation.Y = mousePosition.Y - 50;
                 element.RenderTransform = elementTranslation;
 
                 //check if close enough to snap
-                /*
+                
                 Point currentPosition = new Point(elementTranslation.X,elementTranslation.Y);
                 Point ElementCorrectPos = correctPositions[(element as FrameworkElement)?.Name];
                 double distance = CalculateDistance(currentPosition, ElementCorrectPos);
@@ -73,7 +73,7 @@ namespace Legpuzzel_ver1_Meindert
                     element.IsHitTestVisible = false; //stay 
                    
                 }
-                */
+                
             }
 
         }

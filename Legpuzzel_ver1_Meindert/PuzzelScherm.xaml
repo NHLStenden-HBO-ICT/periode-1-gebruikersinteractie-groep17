@@ -18,12 +18,12 @@
                 <TranslateTransform X="0" Y="150" />
             </Rectangle.RenderTransform>
         </Rectangle>
-        <!--
-        <Rectangle Name="YellowElement" Height="75" Width="500" Fill="Yellow" MouseLeftButtonDown = "DraggableElement_MouseLeftButtonDown" MouseMove="DraggableElement_MouseMove" MouseLeftButtonUp="DraggableElement_MouseLeftButtonUp">
+        
+        <Rectangle Name="YellowElement" Height="100" Width="100" Fill="Yellow" MouseLeftButtonDown = "DraggableElement_MouseLeftButtonDown" MouseMove="DraggableElement_MouseMove" MouseLeftButtonUp="DraggableElement_MouseLeftButtonUp">
             <Rectangle.RenderTransform>
-                <TranslateTransform X="0" Y="200"/>
+                <TranslateTransform X="0" Y="300"/>
             </Rectangle.RenderTransform>
         </Rectangle>
-         -->
+         
     </Canvas>
 </Window>

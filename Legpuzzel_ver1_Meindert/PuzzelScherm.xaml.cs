@@ -21,22 +21,78 @@ namespace Legpuzzel_ver1_Meindert
     {
         Dictionary<string, Point> correctPositions = new Dictionary<string, Point>(); //make dictionary with elements and solved positions
         Dictionary<string, bool> SolvedPieces = new Dictionary<string, bool>(); //dictionary for solved/unsolved pieces. 
+        private Image[,] puzzlePieces; // Store puzzle piece images
+
 
         public PuzzelScherm()
         {
-            InitializeComponent();//adding elements to the dictionaries
-            correctPositions.Add("BlackElement", new Point(400, 100));//adding the solved locations
-            correctPositions.Add("RedElement", new Point(400, 200));
-            correctPositions.Add("YellowElement", new Point(400, 300));
-            SolvedPieces["BlackElement"] = false;//adding bools wether or not the pieces are solved
-            SolvedPieces["RedElement"] = false;
-            SolvedPieces["YellowElement"] = false;
+            InitializeComponent();
+            GeneratePuzzle();
 
         }
         //preparing variables
         private bool isDragging = false;
         private TranslateTransform elementTranslation = new TranslateTransform();
         private UIElement currentlyDraggedElement = null;
+        private void GeneratePuzzle()
+        {
+            // Clear the canvas
+            PuzzleCanvas.Children.Clear();
+
+            correctPositions.Clear();
+            SolvedPieces.Clear();
+
+            // Loading image
+            BitmapImage sourceImage = new BitmapImage(new Uri("Pictures/Nase-zivali-kapibara-2.png", UriKind.Relative));
+
+            int rows = 5; // Define the number of rows and columns for puzzle, later wordt dit via een variabel gedaan van ander scherm
+            int columns = 5;
+
+            double pieceWidth = sourceImage.PixelWidth / columns;
+            double pieceHeight = sourceImage.PixelHeight / rows;
+
+            puzzlePieces = new Image[rows, columns];
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    // Create a CroppedBitmap to represent each puzzle piece
+                    CroppedBitmap croppedPiece = new CroppedBitmap(sourceImage, new Int32Rect((int)(j * pieceWidth), (int)(i * pieceHeight), (int)pieceWidth, (int)pieceHeight));
+                    Image pieceImage = new Image();
+                    pieceImage.Source = croppedPiece;
+                    pieceImage.Name = $"Piece_{i}_{j}";
+
+                    // Calculate the correct position for each piece
+             
+                    double correctLeft = j * pieceWidth;
+                    double correctTop = i * pieceHeight;
+
+                    correctPositions.Add(pieceImage.Name, new Point(correctLeft, correctTop));
+
+
+                    // Initialize the solved status
+                    SolvedPieces[pieceImage.Name] = false;
+
+                    // Set up the image's properties
+                    pieceImage.Width = pieceWidth;
+                    pieceImage.Height = pieceHeight;
+
+                    // Add event handlers
+                    pieceImage.MouseLeftButtonDown += DraggableElement_MouseLeftButtonDown;
+                    pieceImage.MouseMove += DraggableElement_MouseMove;
+                    pieceImage.MouseLeftButtonUp += DraggableElement_MouseLeftButtonUp;
+
+                    // Add the piece to the canvas
+                    Canvas.SetLeft(pieceImage, j * pieceWidth +200 );
+                    Canvas.SetTop(pieceImage, i * pieceHeight);
+                    pieceImage.RenderTransform = new TranslateTransform(); // Ensure the RenderTransform is set
+                    PuzzleCanvas.Children.Add(pieceImage);
+
+                    puzzlePieces[i, j] = pieceImage;
+                }
+            }
+        }
 
 
         private void DraggableElement_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) //if click on element
@@ -52,23 +108,29 @@ namespace Legpuzzel_ver1_Meindert
             {
                 //movement code
                 var element = (UIElement)sender;
-                Point mousePosition = Mouse.GetPosition(PuzzleCanvas);//Locate mouse within canvas
+                Point mousePosition = Mouse.GetPosition(null);//Locate mouse within canvas
+
+                // This sets the center of the element as the origin.
+                double width = (element as FrameworkElement)?.Width ?? 0; //pak de width van element
+                double height = (element as FrameworkElement)?.Height ?? 0;//same
+                Canvas.SetLeft(element, mousePosition.X - width / 2);//was een bug waarbij de GetLeft niet veranderde, dit fixt het
+                Canvas.SetTop(element, mousePosition.Y - height / 2);
                 var elementTranslation = element.RenderTransform as TranslateTransform;
-                elementTranslation.X = mousePosition.X - 50;//setting the mouse coordinates to the element
-                elementTranslation.Y = mousePosition.Y - 50;//-50 to grab it at the middle
+                elementTranslation.X = mousePosition.X - (Canvas.GetLeft(element) + width / 2);
+                elementTranslation.Y = mousePosition.Y - (Canvas.GetTop(element) + height / 2);//to grab it at the middle
                 element.RenderTransform = elementTranslation; //actually moving the element
 
-                //check if close enough to snap
+            
                 
-                Point currentPosition = new Point(elementTranslation.X,elementTranslation.Y);//make point with current position element
+                Point currentPosition = new Point(Canvas.GetLeft(element), Canvas.GetTop(element));//make point with current position element
                 Point ElementCorrectPos = correctPositions[(element as FrameworkElement)?.Name];//grab to solving position of this specific element
                 double distance = CalculateDistance(currentPosition, ElementCorrectPos);
                 
 
-                if (distance < 50) //checking if close enough to snap
+                if (distance < 100) //checking if close enough to snap
                 {
-                    elementTranslation.X = ElementCorrectPos.X;
-                    elementTranslation.Y = ElementCorrectPos.Y;
+                    elementTranslation.X = ElementCorrectPos.X - Canvas.GetLeft(element);
+                    elementTranslation.Y = ElementCorrectPos.Y - Canvas.GetTop(element);
                     element.RenderTransform = elementTranslation;
                     isDragging = false;
                   
@@ -105,6 +167,12 @@ namespace Legpuzzel_ver1_Meindert
         public void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Set the window to fullscreen mode
+            this.WindowState = WindowState.Maximized;
         }
     }
 }

@@ -5,28 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Legpuzzel_ver1_Meindert"
         mc:Ignorable="d"
-        Title="PuzzelScherm" Height="450" Width="800">
+        Title="PuzzelScherm" Loaded="Window_Loaded">
     <Grid>
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugOffButtonStyle}"/>
 
-        <Canvas Focusable="True" Name="PuzzleCanvas">
-        <Rectangle Name="BlackElement" IsHitTestVisible="True" Height="100" Width="100" Fill="black"  MouseLeftButtonDown = "DraggableElement_MouseLeftButtonDown" MouseMove="DraggableElement_MouseMove" MouseLeftButtonUp="DraggableElement_MouseLeftButtonUp">
-            <Rectangle.RenderTransform>
-                <TranslateTransform X="0" Y="0"/>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        
-        <Rectangle Name="RedElement" Height="100" Width="100" Fill="Red"  MouseLeftButtonDown = "DraggableElement_MouseLeftButtonDown" MouseMove="DraggableElement_MouseMove" MouseLeftButtonUp="DraggableElement_MouseLeftButtonUp">
-            <Rectangle.RenderTransform>
-                <TranslateTransform X="0" Y="150" />
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        
-        <Rectangle Name="YellowElement" Height="100" Width="100" Fill="Yellow" MouseLeftButtonDown = "DraggableElement_MouseLeftButtonDown" MouseMove="DraggableElement_MouseMove" MouseLeftButtonUp="DraggableElement_MouseLeftButtonUp">
-            <Rectangle.RenderTransform>
-                <TranslateTransform X="0" Y="300"/>
-            </Rectangle.RenderTransform>
-        </Rectangle>
+        <Canvas Focusable="True" Name="PuzzleCanvas" >
+       
          
     </Canvas>
     </Grid>

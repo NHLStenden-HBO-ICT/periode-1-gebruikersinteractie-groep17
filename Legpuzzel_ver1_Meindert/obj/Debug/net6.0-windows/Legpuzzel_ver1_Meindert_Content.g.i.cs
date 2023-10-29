@@ -9,5 +9,6 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("muziek/de_muziek2.mp3")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/nase-zivali-kapibara-2.png")]
 
 

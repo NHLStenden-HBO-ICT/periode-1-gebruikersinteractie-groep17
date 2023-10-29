@@ -59,7 +59,7 @@ namespace Legpuzzel_ver1_Meindert {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/Legpuzzel_ver1_Meindert;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Legpuzzel_ver1_Meindert;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

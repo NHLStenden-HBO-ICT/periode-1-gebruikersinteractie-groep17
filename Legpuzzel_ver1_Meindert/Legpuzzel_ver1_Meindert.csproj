@@ -16,12 +16,16 @@
     <None Remove="Pictures\MusicOffHover.png" />
     <None Remove="Pictures\MusicOn.png" />
     <None Remove="Pictures\MusicOnHover.png" />
+    <None Remove="Pictures\Nase-zivali-kapibara-2.png" />
     <None Remove="Pictures\OffButton.png" />
     <None Remove="Pictures\OffButtonHover.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="muziek\De_Muziek2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\Nase-zivali-kapibara-2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Pictures\BackArrow.png">

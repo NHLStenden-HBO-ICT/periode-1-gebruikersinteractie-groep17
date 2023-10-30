@@ -1,0 +1,34 @@
+﻿<Window x:Class="Legpuzzel_ver1_Meindert.PuzzelScherm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Legpuzzel_ver1_Meindert"
+        mc:Ignorable="d"
+        Title="PuzzelScherm" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugOffButtonStyle}"/>
+        <Button x:Name="RestartButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="RestartButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugRestartStyle}" Margin="0,100,0,0"/>
+
+        <Canvas Focusable="True" Name="PuzzleCanvas">
+        <Rectangle Name="BlackElement" IsHitTestVisible="True" Height="100" Width="100" Fill="black"  MouseLeftButtonDown = "DraggableElement_MouseLeftButtonDown" MouseMove="DraggableElement_MouseMove" MouseLeftButtonUp="DraggableElement_MouseLeftButtonUp">
+            <Rectangle.RenderTransform>
+                <TranslateTransform X="0" Y="0"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        
+        <Rectangle Name="RedElement" Height="100" Width="100" Fill="Red"  MouseLeftButtonDown = "DraggableElement_MouseLeftButtonDown" MouseMove="DraggableElement_MouseMove" MouseLeftButtonUp="DraggableElement_MouseLeftButtonUp">
+            <Rectangle.RenderTransform>
+                <TranslateTransform X="0" Y="150" />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        
+        <Rectangle Name="YellowElement" Height="100" Width="100" Fill="Yellow" MouseLeftButtonDown = "DraggableElement_MouseLeftButtonDown" MouseMove="DraggableElement_MouseMove" MouseLeftButtonUp="DraggableElement_MouseLeftButtonUp">
+            <Rectangle.RenderTransform>
+                <TranslateTransform X="0" Y="300"/>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+         
+    </Canvas>
+    </Grid>
+</Window>

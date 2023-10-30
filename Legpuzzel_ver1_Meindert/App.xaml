@@ -12,6 +12,8 @@
         <ImageBrush x:Key="OffButtonHover"  ImageSource="\Pictures\OffButtonHover.png" />
         <ImageBrush x:Key="BackArrow" ImageSource="\Pictures\BackArrow.png" />
         <ImageBrush x:Key="BackArrowHover"  ImageSource="\Pictures\BackArrowHover.png" />
+        <ImageBrush x:Key="Restart" ImageSource="\Pictures\RestartButton.png" />
+        <ImageBrush x:Key="RestartHover"  ImageSource="\Pictures\RestartButtonHover.png" />
 
 
 
@@ -83,6 +85,30 @@
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="{StaticResource OffButtonHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="NoBugRestartStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource Restart}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+         BorderBrush="{TemplateBinding BorderBrush}"
+         BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource RestartHover}" />
                 </Trigger>
             </Style.Triggers>
         </Style>

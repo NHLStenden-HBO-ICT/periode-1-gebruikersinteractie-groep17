@@ -19,6 +19,8 @@
     <None Remove="Pictures\Nase-zivali-kapibara-2.png" />
     <None Remove="Pictures\OffButton.png" />
     <None Remove="Pictures\OffButtonHover.png" />
+    <None Remove="Pictures\RestartButton.png" />
+    <None Remove="Pictures\RestartButtonHover.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,6 +55,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pictures\OffButtonHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\RestartButton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\RestartButtonHover.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

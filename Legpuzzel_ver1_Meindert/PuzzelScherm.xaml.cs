@@ -169,7 +169,17 @@ namespace Legpuzzel_ver1_Meindert
             Application.Current.Shutdown();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void RestartButton_Click(object sender, EventArgs e)
+        {
+            NaStartscherm naStartscherm = Application.Current.Windows.OfType<NaStartscherm>().FirstOrDefault();
+            if (naStartscherm != null)
+            {
+                naStartscherm.Visibility = Visibility.Visible; //makes NaStartscherm visible again
+            }
+            this.Close(); // closes the current PuzzelScherm
+        }
+
+            private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             // Set the window to fullscreen mode
             this.WindowState = WindowState.Maximized;

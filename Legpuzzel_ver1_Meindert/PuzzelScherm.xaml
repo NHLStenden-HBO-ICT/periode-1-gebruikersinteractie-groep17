@@ -8,7 +8,7 @@
         Title="PuzzelScherm" Loaded="Window_Loaded">
     <Grid>
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugOffButtonStyle}"/>
-
+        <Button x:Name="RestartButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="RestartButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugRestartStyle}" Margin="0,100,0,0"/>
         <Canvas Focusable="True" Name="PuzzleCanvas" >
        
          

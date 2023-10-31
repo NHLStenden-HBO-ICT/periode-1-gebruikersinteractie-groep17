@@ -99,6 +99,12 @@ namespace Legpuzzel_ver1_Meindert
         {
             isDragging = true;
             currentlyDraggedElement = (UIElement)sender;//sla op welk element deze code heeft geactiveerd in variable "element"
+            if (PuzzleCanvas.Children.Contains(currentlyDraggedElement))
+            {
+                PuzzleCanvas.Children.Remove(currentlyDraggedElement);
+                PuzzleCanvas.Children.Add(currentlyDraggedElement);
+            }
+
 
         }
 
@@ -127,7 +133,7 @@ namespace Legpuzzel_ver1_Meindert
                 double distance = CalculateDistance(currentPosition, ElementCorrectPos);
                 
 
-                if (distance < 100) //checking if close enough to snap
+                if (distance < 50) //checking if close enough to snap
                 {
                     elementTranslation.X = ElementCorrectPos.X - Canvas.GetLeft(element);
                     elementTranslation.Y = ElementCorrectPos.Y - Canvas.GetTop(element);

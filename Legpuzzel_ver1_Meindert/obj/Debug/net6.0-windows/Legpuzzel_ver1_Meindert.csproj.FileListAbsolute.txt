@@ -146,3 +146,33 @@ C:\Users\meind\Documents\GitHub\periode-1-gebruikersinteractie-groep17\Legpuzzel
 C:\Users\meind\Documents\GitHub\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.pdb
 C:\Users\meind\Documents\GitHub\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.genruntimeconfig.cache
 C:\Users\meind\Documents\GitHub\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\ref\Legpuzzel_ver1_Meindert.dll
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.exe
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\muziek\De_Muziek2.mp3
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Pictures\Nase-zivali-kapibara-2.png
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.deps.json
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.runtimeconfig.json
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.dll
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.pdb
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\KiesPuzzelScherm.g.cs
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\NaStartscherm.g.cs
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\PuzzelScherm.g.cs
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\StartScherm.g.cs
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert_Content.g.cs
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert_MarkupCompile.cache
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert_MarkupCompile.lref
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\App.baml
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\KiesPuzzelScherm.baml
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\NaStartscherm.baml
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\PuzzelScherm.baml
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\StartScherm.baml
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.g.resources
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.AssemblyInfoInputs.cache
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.AssemblyInfo.cs
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.csproj.CoreCompileInputs.cache
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.dll
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\refint\Legpuzzel_ver1_Meindert.dll
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.pdb
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.genruntimeconfig.cache
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\ref\Legpuzzel_ver1_Meindert.dll

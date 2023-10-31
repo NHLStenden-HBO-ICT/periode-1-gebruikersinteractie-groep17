@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="KiesPuzzelScherm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="NaStartscherm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,6 +18,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="KiesPuzzelScherm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="PuzzelScherm.xaml">
       <SubType>Designer</SubType>
     </Page>

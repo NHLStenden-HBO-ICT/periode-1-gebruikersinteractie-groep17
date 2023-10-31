@@ -1,0 +1,21 @@
+﻿<Window x:Class="Legpuzzel_ver1_Meindert.KiesPuzzelScherm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Legpuzzel_ver1_Meindert"
+        mc:Ignorable="d"
+        Title="KiesPuzzelScherm" Height="450" Width="800">
+    <Grid>
+        <Rectangle Fill="#FFF8F5"/>
+        <Image x:Name="LOGO" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0 0 0 10" Source="/pictures/logo_carrot_gems.png"/>
+        <TextBlock Text="Kies de grootte:" VerticalAlignment="Top" HorizontalAlignment="Center" TextWrapping="Wrap" Margin="0 30 0 0" Style="{StaticResource TextBlockKiesPuzzel}"/>
+        <Button Content="5 bij 5" Height="50" Width="135" Margin="0 0 400 100" Click="vijf_click" Style="{StaticResource KiesPuzzelButtons}"/>
+        <Button Content="6 bij 6" Height="50" Width="135" Margin="0 0 0 100" Click="zes_click" Style="{StaticResource KiesPuzzelButtons}"/>
+        <Button Content="7 bij 7" Height="50" Width="135" Margin="400 0 0 100" Click="zeven_click" Style="{StaticResource KiesPuzzelButtons}"/>
+        <Button Content="8 bij 8" Height="50" Width="135" Margin="0 100 400 0" Click="acht_click" Style="{StaticResource KiesPuzzelButtons}"/>
+        <Button Content="9 bij 9" Height="50" Width="135" Margin="0 100 0 0" Click="negen_click" Style="{StaticResource KiesPuzzelButtons}"/>
+        <Button Content="10 bij 10" Height="50" Width="135" Margin="400 100 0 0" Click="tien_click" Style="{StaticResource KiesPuzzelButtons}"/>
+        <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="170" Margin="0 330 0 0" Click="start_click" Style="{StaticResource Buttons}"/>
+    </Grid>
+</Window>

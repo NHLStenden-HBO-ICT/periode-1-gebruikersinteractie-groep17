@@ -7,8 +7,10 @@
         mc:Ignorable="d"
         Title="PuzzelScherm" Loaded="Window_Loaded">
     <Grid>
+        <Image x:Name="LOGO" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0 0 0 10" Source="/pictures/logo_carrot_gems.png"/>
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugOffButtonStyle}"/>
         <Button x:Name="RestartButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="RestartButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugRestartStyle}" Margin="0,100,0,0"/>
+        <TextBlock x:Name="PlayerNamesBlock" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 15 0 0" TextWrapping="Wrap" Style="{StaticResource TextBlocks}"/>
         <Canvas Focusable="True" Name="PuzzleCanvas" >
        
          

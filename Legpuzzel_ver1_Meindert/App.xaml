@@ -142,6 +142,35 @@
             </Setter>
         </Style>
 
+        <Style x:Key="KiesPuzzelButtons" TargetType="Button">
+            <Setter Property="Background" Value="#FF6666"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#FFF8F5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="BorderBrush" Value="#FF6666"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}"
+             BorderBrush="{TemplateBinding BorderBrush}"
+             BorderThickness="{TemplateBinding BorderThickness}"
+             CornerRadius="30">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF9966"/>
+                                <Setter Property="BorderBrush" Value="#FF9966"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style x:Key="BackArrowStyle" TargetType="Button">
             <Setter Property="Background" Value="{StaticResource BackArrow}" />
             <Setter Property="BorderBrush" Value="Transparent" />
@@ -171,7 +200,13 @@
             <Setter Property="Foreground" Value="#FFF8F5"/>
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
 
+        <Style x:Key="TextBlockKiesPuzzel" TargetType="TextBlock">
+            <Setter Property="Background" Value="#FF3477"/>
+            <Setter Property="Foreground" Value="#FFF8F5"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
         </Style>
     </Application.Resources>
 </Application>

@@ -10,6 +10,7 @@
   
 
     <Grid>
+        <Image x:Name="LOGO" Height="50" Width="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0 0 0 10" Source="/pictures/logo_carrot_gems.png"/>
         <Button Name="MuziekKnop" Margin="0,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Click="MuziekKnop_Click"  BorderBrush="Transparent" Style="{StaticResource NoBugMusicOffStyle}"/>
         <TextBlock Text=" Naam Speler 1:" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="135" Margin="150" Style="{StaticResource TextBlocks}"/>
         <TextBlock Text=" Naam Speler 2:" HorizontalAlignment="Right" VerticalAlignment="Center" Height="30" Width="135" Margin="150" Style="{StaticResource TextBlocks}"/>

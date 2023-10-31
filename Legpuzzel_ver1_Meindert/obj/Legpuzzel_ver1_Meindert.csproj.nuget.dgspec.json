@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\meind\\Documents\\GitHub\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\Legpuzzel_ver1_Meindert.csproj": {}
+    "C:\\Users\\nikol\\OneDrive\\Bureaublad\\Git Nikolaj Desktop\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\Legpuzzel_ver1_Meindert.csproj": {}
   },
   "projects": {
-    "C:\\Users\\meind\\Documents\\GitHub\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\Legpuzzel_ver1_Meindert.csproj": {
+    "C:\\Users\\nikol\\OneDrive\\Bureaublad\\Git Nikolaj Desktop\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\Legpuzzel_ver1_Meindert.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\meind\\Documents\\GitHub\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\Legpuzzel_ver1_Meindert.csproj",
+        "projectUniqueName": "C:\\Users\\nikol\\OneDrive\\Bureaublad\\Git Nikolaj Desktop\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\Legpuzzel_ver1_Meindert.csproj",
         "projectName": "Legpuzzel_ver1_Meindert",
-        "projectPath": "C:\\Users\\meind\\Documents\\GitHub\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\Legpuzzel_ver1_Meindert.csproj",
-        "packagesPath": "C:\\Users\\meind\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\meind\\Documents\\GitHub\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\obj\\",
+        "projectPath": "C:\\Users\\nikol\\OneDrive\\Bureaublad\\Git Nikolaj Desktop\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\Legpuzzel_ver1_Meindert.csproj",
+        "packagesPath": "C:\\Users\\nikol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nikol\\OneDrive\\Bureaublad\\Git Nikolaj Desktop\\periode-1-gebruikersinteractie-groep17\\Legpuzzel_ver1_Meindert\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\meind\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nikol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

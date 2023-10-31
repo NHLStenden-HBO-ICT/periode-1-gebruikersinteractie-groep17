@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Legpuzzel_ver1_Meindert
 {
@@ -133,23 +134,7 @@ namespace Legpuzzel_ver1_Meindert
                 double distance = CalculateDistance(currentPosition, ElementCorrectPos);
                 
 
-                if (distance < 50) //checking if close enough to snap
-                {
-                    elementTranslation.X = ElementCorrectPos.X - Canvas.GetLeft(element);
-                    elementTranslation.Y = ElementCorrectPos.Y - Canvas.GetTop(element);
-                    element.RenderTransform = elementTranslation;
-                    isDragging = false;
-                  
-                    element.IsHitTestVisible = false; //stay solved, can't drag the element anymore
-                    SolvedPieces[(element as FrameworkElement)?.Name] = true;//set solved to true in SolvedPieces directory
-                    bool allValuesTrue = SolvedPieces.Values.All(value => value); //check if all is solved
-                    if (allValuesTrue)
-                    {
-                        // All values in the dictionary are true, so you have won
-                        MessageBox.Show("Je hebt gewonnen", "Gefeliciteerd");
-                    }
-
-                }
+              
                 
             }
 
@@ -161,8 +146,33 @@ namespace Legpuzzel_ver1_Meindert
            
          isDragging = false;
          currentlyDraggedElement = null;
-
             
+            var element = (UIElement)sender;
+            var elementTranslation = element.RenderTransform as TranslateTransform;
+            Point currentPosition = new Point(Canvas.GetLeft(element), Canvas.GetTop(element));//make point with current position element
+            Point ElementCorrectPos = correctPositions[(element as FrameworkElement)?.Name];//grab to solving position of this specific element
+            double distance = CalculateDistance(currentPosition, ElementCorrectPos);
+            double width = (element as FrameworkElement)?.Width ?? 0; //pak de width van element
+
+
+            if (distance < width/2 ) //checking if close enough to snap
+            {
+                elementTranslation.X = ElementCorrectPos.X - Canvas.GetLeft(element);
+                elementTranslation.Y = ElementCorrectPos.Y - Canvas.GetTop(element);
+                element.RenderTransform = elementTranslation;
+                isDragging = false;
+
+                element.IsHitTestVisible = false; //stay solved, can't drag the element anymore
+                SolvedPieces[(element as FrameworkElement)?.Name] = true;//set solved to true in SolvedPieces directory
+                bool allValuesTrue = SolvedPieces.Values.All(value => value); //check if all is solved
+                if (allValuesTrue)
+                {
+                    // All values in the dictionary are true, so you have won
+                    MessageBox.Show("Je hebt gewonnen", "Gefeliciteerd");
+                }
+
+            }
+
         }
         private double CalculateDistance(Point point1, Point point2) //calculating distance between the solved position and the element
         {

@@ -32,6 +32,7 @@ namespace Legpuzzel_ver1_Meindert
         public StartScherm()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
 
         }
         private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)

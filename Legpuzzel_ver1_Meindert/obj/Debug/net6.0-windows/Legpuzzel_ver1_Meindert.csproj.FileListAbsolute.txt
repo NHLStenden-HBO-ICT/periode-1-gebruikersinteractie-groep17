@@ -176,3 +176,7 @@ C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinter
 C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.pdb
 C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\Legpuzzel_ver1_Meindert.genruntimeconfig.cache
 C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\ref\Legpuzzel_ver1_Meindert.dll
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\KiesFotoScherm.g.cs
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\obj\Debug\net6.0-windows\KiesFotoScherm.baml
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Pictures\Pandapuzzel.png
+C:\Users\nikol\OneDrive\Bureaublad\Git Nikolaj Desktop\periode-1-gebruikersinteractie-groep17\Legpuzzel_ver1_Meindert\bin\Debug\net6.0-windows\Pictures\aappuzzel.png

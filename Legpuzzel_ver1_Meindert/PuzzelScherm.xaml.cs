@@ -20,25 +20,28 @@ namespace Legpuzzel_ver1_Meindert
     /// </summary>
     public partial class PuzzelScherm : Window
     {
-        KiesPuzzelScherm kiespuzzelscherm;
+        KiesFotoScherm kiesfotoscherm;
         string PlayerName1;
         string PlayerName2;
         int PuzzelGrootte;
+        int PuzzelKeuze;
 
         Dictionary<string, Point> correctPositions = new Dictionary<string, Point>(); //make dictionary with elements and solved positions
         Dictionary<string, bool> SolvedPieces = new Dictionary<string, bool>(); //dictionary for solved/unsolved pieces. 
         private Image[,] puzzlePieces; // Store puzzle piece images
 
 
-        public PuzzelScherm(KiesPuzzelScherm kps, string PlayerName1, string PlayerName2, int PuzzelGrootte)
+        public PuzzelScherm(KiesFotoScherm kfs, string PlayerName1, string PlayerName2, int PuzzelGrootte, int puzzelKeuze)
         {
             InitializeComponent();
             this.PlayerName1 = PlayerName1;
             this.PlayerName2 = PlayerName2;
             this.PuzzelGrootte = PuzzelGrootte;
+            this.PuzzelKeuze = puzzelKeuze;
+            kiesfotoscherm = kfs;
             PlayerNamesBlock.Text = PlayerName1 + " speelt samen met " + PlayerName2;
             GeneratePuzzle();
-
+            
         }
         //preparing variables
         private bool isDragging = false;
@@ -54,8 +57,20 @@ namespace Legpuzzel_ver1_Meindert
 
             // Loading image
             BitmapImage sourceImage = new BitmapImage(new Uri("Pictures/Nase-zivali-kapibara-2.png", UriKind.Relative));
+           
+            if (PuzzelKeuze == 1)
+            {
+                sourceImage = new BitmapImage(new Uri("Pictures/Nase-zivali-kapibara-2.png", UriKind.Relative));
+            }
+            else if (PuzzelKeuze == 2)
+            {
+                sourceImage = new BitmapImage(new Uri("Pictures/Pandapuzzel.png", UriKind.Relative));
+            }else if (PuzzelKeuze == 3)
+            {
+                sourceImage = new BitmapImage(new Uri("Pictures/aappuzzel.png", UriKind.Relative));
+            }
 
-            int rows = PuzzelGrootte; // Define the number of rows and columns for puzzle, later wordt dit via een variabel gedaan van ander scherm
+            int rows = PuzzelGrootte; // Define the number of rows and columns for puzzle, these are defined by the valuble "Puzzelgrootte" which is passed through form the previous window
             int columns = PuzzelGrootte;
 
             double pieceWidth = sourceImage.PixelWidth / columns;

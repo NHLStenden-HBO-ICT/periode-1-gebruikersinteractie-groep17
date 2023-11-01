@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="muziek\De_Muziek2.mp3" />
+    <None Remove="Pictures\aappuzzel.png" />
     <None Remove="Pictures\BackArrow.png" />
     <None Remove="Pictures\BackArrowHover.png" />
     <None Remove="Pictures\logo_carrot_gems.png" />
@@ -19,12 +20,16 @@
     <None Remove="Pictures\Nase-zivali-kapibara-2.png" />
     <None Remove="Pictures\OffButton.png" />
     <None Remove="Pictures\OffButtonHover.png" />
+    <None Remove="Pictures\Pandapuzzel.png" />
     <None Remove="Pictures\RestartButton.png" />
     <None Remove="Pictures\RestartButtonHover.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="muziek\De_Muziek2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pictures\aappuzzel.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Pictures\Nase-zivali-kapibara-2.png">
@@ -57,6 +62,9 @@
     <Resource Include="Pictures\OffButtonHover.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Content Include="Pictures\Pandapuzzel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Pictures\RestartButton.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

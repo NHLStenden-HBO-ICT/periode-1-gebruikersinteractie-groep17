@@ -19,21 +19,21 @@ namespace Legpuzzel_ver1_Meindert
     /// </summary>
     public partial class KiesPuzzelScherm : Window
     {
-        NaStartscherm nastartscherm;
-        string PlayerName1;
+        NaStartscherm nastartscherm; //vorige scherm herkenbaar maken voor dit scherm
+        string PlayerName1; //strings van vorige scherm opniew aanmaken zodat dit scherm ze herkent
         string PlayerName2;
 
         int PuzzelGrootte;
-        public KiesPuzzelScherm(NaStartscherm nss, string PlayerName1, string PlayerName2)
+        public KiesPuzzelScherm(NaStartscherm nss, string PlayerName1, string PlayerName2) //public kiespuzzelscherm met de waardes die doorgegeven zijn van het vorige scherm
         {
             InitializeComponent();
-            nastartscherm = nss;
+            nastartscherm = nss; //Dit scherm vertellen dat het vorige scherm hetzelfde scherm is als het scherm waar de waardes vandaan komen
 
-            this.PlayerName1 = PlayerName1;
+            this.PlayerName1 = PlayerName1; //de strings die in dit scherm zijn aangemaakt worden nu gelijk gesteld aan de strings van het vorige scherm zodat c# weet dat het eigenlijk dezelfde strings zijn
             this.PlayerName2 = PlayerName2;
         }
 
-        private void vijf_click(object sender, RoutedEventArgs e)
+        private void vijf_click(object sender, RoutedEventArgs e) //op welke knop er geklikt wordt bepaald de int puzzelgrootte en zet deze naar hoe groot deze moet worden in het volgende scherm.
         {
             PuzzelGrootte = 5;
         }
@@ -63,17 +63,17 @@ namespace Legpuzzel_ver1_Meindert
             PuzzelGrootte = 10;
         }
 
-        private void start_click(object sender, RoutedEventArgs e)
+        private void start_click(object sender, RoutedEventArgs e) 
         {
-            if (PuzzelGrootte == 0)
+            if (PuzzelGrootte == 0) 
             {
-                MessageBox.Show("Kies eerst een puzzelgrootte!");
+                MessageBox.Show("Kies eerst een puzzelgrootte!"); // als er geen puzzelgrootte is gekozen popt deze message box op
             }
             else
             {
-                PuzzelScherm ps = new PuzzelScherm(this, PlayerName1, PlayerName2, PuzzelGrootte);
-                ps.Visibility = Visibility.Visible;
-                this.Visibility = Visibility.Hidden;
+                KiesFotoScherm kfs = new KiesFotoScherm(this, PlayerName1, PlayerName2, PuzzelGrootte); //als er wel een grootte is gekozen wordt deze doorgegeven naar het volgende scherm
+                kfs.Visibility = Visibility.Visible;                                                //samen met de playername strings en de puzzelgrootte omdat deze nodig zijn in het volgende scherm
+                this.Visibility = Visibility.Hidden; //de schermen worden visible en invisible gemaakt
             }
         }
     }

@@ -93,7 +93,7 @@ namespace Legpuzzel_ver1_Meindert {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Legpuzzel_ver1_Meindert;V1.0.0.0;component/puzzelscherm.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Legpuzzel_ver1_Meindert;component/puzzelscherm.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\PuzzelScherm.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

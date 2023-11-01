@@ -32,6 +32,7 @@ namespace Legpuzzel_ver1_Meindert
         public StartScherm()
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
 
         }
         private void MediaElement_MediaEnded(object sender, RoutedEventArgs e)
@@ -106,6 +107,12 @@ namespace Legpuzzel_ver1_Meindert
         {
             isSoundPlaying = false;
             ButtonSound.MediaEnded -= ButtonSound_MediaEnded;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Set the window to fullscreen mode
+            this.WindowState = WindowState.Maximized;
         }
 
 

@@ -20,6 +20,11 @@ namespace Legpuzzel_ver1_Meindert
     public partial class NaStartscherm : Window
     {
         StartScherm startscherm;
+        public NaStartscherm()
+        {
+            InitializeComponent();
+            this.WindowState = WindowState.Maximized;
+        }
         bool Moff;
         public string PlayerName1 { get; set; }
         public string PlayerName2 { get; set; }
@@ -28,6 +33,7 @@ namespace Legpuzzel_ver1_Meindert
         public NaStartscherm(StartScherm ss, bool Moff, bool Goff)
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             startscherm = ss;
 
             this.Moff = Moff;

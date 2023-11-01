@@ -26,7 +26,6 @@
     <None Remove="Pictures\SoundOn.png" />
     <None Remove="Pictures\SoundOnHover.png" />
     <None Remove="sounds\click-button-140881.mp3" />
-    <None Remove="sounds\click-button-140881.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,9 +36,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="sounds\click-button-140881.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sounds\click-button-140881.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Pictures\BackArrow.png">

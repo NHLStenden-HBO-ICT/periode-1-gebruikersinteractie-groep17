@@ -108,6 +108,12 @@ namespace Legpuzzel_ver1_Meindert
             ButtonSound.MediaEnded -= ButtonSound_MediaEnded;
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // Set the window to fullscreen mode
+            this.WindowState = WindowState.Maximized;
+        }
+
 
     }
 }

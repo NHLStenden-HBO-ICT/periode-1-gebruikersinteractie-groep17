@@ -14,6 +14,10 @@
         <ImageBrush x:Key="BackArrowHover"  ImageSource="\Pictures\BackArrowHover.png" />
         <ImageBrush x:Key="Restart" ImageSource="\Pictures\RestartButton.png" />
         <ImageBrush x:Key="RestartHover"  ImageSource="\Pictures\RestartButtonHover.png" />
+        <ImageBrush x:Key="SoundOn" ImageSource="\Pictures\SoundOn.png" />
+        <ImageBrush x:Key="SoundOnHover"  ImageSource="\Pictures\SoundOnHover.png" />
+        <ImageBrush x:Key="SoundOff" ImageSource="\Pictures\SoundOff.png" />
+        <ImageBrush x:Key="SoundOffHover"  ImageSource="\Pictures\SoundOffHover.png" />
 
 
 
@@ -61,6 +65,54 @@
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="{StaticResource MusicOnHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="NoBugSoundOffStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource SoundOff}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                 BorderBrush="{TemplateBinding BorderBrush}"
+                 BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource SoundOffHover}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="NoBugSoundOnStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource SoundOn}" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="Cursor" Value="Arrow" />
+            <Setter Property="Template">
+
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+         BorderBrush="{TemplateBinding BorderBrush}"
+         BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{StaticResource SoundOnHover}" />
                 </Trigger>
             </Style.Triggers>
         </Style>

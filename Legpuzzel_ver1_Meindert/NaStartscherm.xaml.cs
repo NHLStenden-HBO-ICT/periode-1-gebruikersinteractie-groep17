@@ -23,7 +23,9 @@ namespace Legpuzzel_ver1_Meindert
         bool Moff;
         public string PlayerName1 { get; set; }
         public string PlayerName2 { get; set; }
-        public NaStartscherm(StartScherm ss, bool Moff)
+        bool Goff;
+        bool isSoundPlaying = false;
+        public NaStartscherm(StartScherm ss, bool Moff, bool Goff)
         {
             InitializeComponent();
             startscherm = ss;
@@ -31,10 +33,21 @@ namespace Legpuzzel_ver1_Meindert
             this.Moff = Moff;
             if (Moff) { this.MuziekKnop.Style = FindResource("NoBugMusicOffStyle") as Style; }
             else {  this.MuziekKnop.Style = FindResource("NoBugMusicOnStyle") as Style; }
+            this.Goff = Goff;
+            if (Goff) { this.Geluidsknop.Style = FindResource("NoBugSoundOffStyle") as Style; }
+            else { this.Geluidsknop.Style = FindResource("NoBugSoundOnStyle") as Style; }
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!Goff && !isSoundPlaying)
+            {
+                // Play the sound and handle MediaEnded event
+                ButtonSound.Position = TimeSpan.Zero;
+                ButtonSound.Play();
+                isSoundPlaying = true;
+                ButtonSound.MediaEnded += (s, args) => isSoundPlaying = false;
+            }
             PlayerName1 = txtPlayerName1.Text;
             PlayerName2 = txtPlayerName2.Text;
             
@@ -46,26 +59,36 @@ namespace Legpuzzel_ver1_Meindert
             {
                 PlayerName2 = "Speler 2";
             }
-            PuzzelScherm ps = new PuzzelScherm();
+            PuzzelScherm ps = new PuzzelScherm(Goff);
             ps.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
         }
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!Goff && !isSoundPlaying)
+            {
+                SpeelGeluid();
+            }
             Application.Current.Shutdown();
+
         }
 
         private void BackArrow_Click(object sender, RoutedEventArgs e)
         {
-            //StartScherm sc = new StartScherm();
-           
+            if (!Goff && !isSoundPlaying)
+            {
+                SpeelGeluid();
+            }
             startscherm.Visibility = Visibility.Visible;
             this.Visibility = Visibility.Hidden;
             
         }
         private void MuziekKnop_Click(object sender, RoutedEventArgs e)
         {
-
+            if (!Goff && !isSoundPlaying)
+            {
+                SpeelGeluid();
+            }
             startscherm.ToggleMusicLocally();
             PublicSwitch();
             
@@ -74,9 +97,42 @@ namespace Legpuzzel_ver1_Meindert
 
 
         }
+
+        private void Geluidsknop_Click(object sender, RoutedEventArgs e)
+        {
+
+            startscherm.ToggleSoundsLocally();
+            PublicSoundSwitch();
+
+            if (Goff) { this.Geluidsknop.Style = FindResource("NoBugSoundOffStyle") as Style; }
+            else { this.Geluidsknop.Style = FindResource("NoBugSoundOnStyle") as Style; }
+            if (!Goff && !isSoundPlaying)
+            {
+                SpeelGeluid();
+            }
+
+        }
         public void PublicSwitch()
         {
             Moff = !Moff;
+        }
+
+        public void PublicSoundSwitch()
+        {
+            Goff = !Goff;
+        }
+
+        public void SpeelGeluid()
+        {
+            ButtonSound.Position = TimeSpan.Zero;
+            ButtonSound.Play();
+            isSoundPlaying = true;
+            ButtonSound.MediaEnded += (s, args) => isSoundPlaying = false;
+        }
+        private void ButtonSound_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            isSoundPlaying = false;
+            ButtonSound.MediaEnded -= ButtonSound_MediaEnded;
         }
     }
 }

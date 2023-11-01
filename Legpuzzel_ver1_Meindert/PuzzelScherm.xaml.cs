@@ -24,16 +24,20 @@ namespace Legpuzzel_ver1_Meindert
         private Image[,] puzzlePieces; // Store puzzle piece images
 
 
-        public PuzzelScherm()
+        public PuzzelScherm(bool Goff)
         {
             InitializeComponent();
             GeneratePuzzle();
-
+            this.Goff = Goff;
+            if (Goff) { this.Geluidsknop.Style = FindResource("NoBugSoundOffStyle") as Style; }
+            else { this.Geluidsknop.Style = FindResource("NoBugSoundOnStyle") as Style; }
         }
         //preparing variables
         private bool isDragging = false;
         private TranslateTransform elementTranslation = new TranslateTransform();
         private UIElement currentlyDraggedElement = null;
+        bool Goff;
+        bool isSoundPlaying = false;
         private void GeneratePuzzle()
         {
             // Clear the canvas
@@ -65,7 +69,7 @@ namespace Legpuzzel_ver1_Meindert
 
                     // Calculate the correct position for each piece
              
-                    double correctLeft = j * pieceWidth;
+                    double correctLeft = j * pieceWidth + 100;
                     double correctTop = i * pieceHeight;
 
                     correctPositions.Add(pieceImage.Name, new Point(correctLeft, correctTop));
@@ -155,8 +159,11 @@ namespace Legpuzzel_ver1_Meindert
            
          isDragging = false;
          currentlyDraggedElement = null;
+            if (!Goff && !isSoundPlaying)
+            {
+                SpeelGeluid();
+            }
 
-            
         }
         private double CalculateDistance(Point point1, Point point2) //calculating distance between the solved position and the element
         {
@@ -166,11 +173,28 @@ namespace Legpuzzel_ver1_Meindert
         }
         public void ExitButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!Goff && !isSoundPlaying)
+            {
+                SpeelGeluid();
+            }
             Application.Current.Shutdown();
+        }
+
+        private void Geluidsknop_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleSoundsLocally();
+            if (!Goff && !isSoundPlaying)
+            {
+                SpeelGeluid();
+            }
         }
 
         private void RestartButton_Click(object sender, EventArgs e)
         {
+            if (!Goff && !isSoundPlaying)
+            {
+                SpeelGeluid();
+            }
             NaStartscherm naStartscherm = Application.Current.Windows.OfType<NaStartscherm>().FirstOrDefault();
             if (naStartscherm != null)
             {
@@ -179,7 +203,26 @@ namespace Legpuzzel_ver1_Meindert
             this.Close(); // closes the current PuzzelScherm
         }
 
-            private void Window_Loaded(object sender, RoutedEventArgs e)
+        public void ToggleSoundsLocally()
+        {
+            if (Goff) { Geluidsknop.Style = FindResource("NoBugSoundOnStyle") as Style; }
+            else { Geluidsknop.Style = FindResource("NoBugSoundOffStyle") as Style; }
+            Goff = !Goff;
+        }
+        public void SpeelGeluid()
+        {
+            ButtonSound.Position = TimeSpan.Zero;
+            ButtonSound.Play();
+            isSoundPlaying = true;
+            ButtonSound.MediaEnded += (s, args) => isSoundPlaying = false;
+        }
+        private void ButtonSound_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            isSoundPlaying = false;
+            ButtonSound.MediaEnded -= ButtonSound_MediaEnded;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             // Set the window to fullscreen mode
             this.WindowState = WindowState.Maximized;

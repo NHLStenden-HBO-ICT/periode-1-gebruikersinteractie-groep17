@@ -13,8 +13,9 @@
         <Rectangle Fill="#F5F5F5"/>
         <Image x:Name="LOGO" HorizontalAlignment="Center" Height="100"  VerticalAlignment="Center" Width="100" Source="/Pictures/logo_carrot_gems.png" />
         <Button Name="MuziekKnop" HorizontalAlignment="Left" VerticalAlignment="Top" Height="100" Width="100" Click="MuziekKnop_Click"  BorderBrush="Transparent" Style="{StaticResource NoBugMusicOffStyle}"/>
-
+        <Button Name="Geluidsknop" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 100 0 0" Height="100" Width="100" Click="Geluidsknop_Click" BorderBrush="Transparent" Style="{StaticResource NoBugSoundOffStyle}"/>
         <MediaElement x:Name="mediaElement" Source="muziek\De_muziek2.mp3" LoadedBehavior="Manual"  MediaEnded="MediaElement_MediaEnded" />
+        <MediaElement x:Name="ButtonSound" Source="sounds\click-button-140881.mp3" LoadedBehavior="Manual" MediaEnded="ButtonSound_MediaEnded"/>
         <Button x:Name="ExitButton" HorizontalAlignment="Right" VerticalAlignment="Top" Height="100" Width="100" Click="ExitButton_Click" BorderBrush="Transparent" Style="{StaticResource NoBugOffButtonStyle}"/>
         <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="170" Margin="0 250 0 0" Click="StartButton_Click" Style="{StaticResource Buttons}"/>
 

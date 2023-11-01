@@ -10,5 +10,7 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("muziek/de_muziek2.mp3")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pictures/nase-zivali-kapibara-2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/click-button-140881.mp3")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/click-button-140881.wav")]
 
 

@@ -21,6 +21,12 @@
     <None Remove="Pictures\OffButtonHover.png" />
     <None Remove="Pictures\RestartButton.png" />
     <None Remove="Pictures\RestartButtonHover.png" />
+    <None Remove="Pictures\SoundOff.png" />
+    <None Remove="Pictures\SoundOffHover.png" />
+    <None Remove="Pictures\SoundOn.png" />
+    <None Remove="Pictures\SoundOnHover.png" />
+    <None Remove="sounds\click-button-140881.mp3" />
+    <None Remove="sounds\click-button-140881.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +34,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Pictures\Nase-zivali-kapibara-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\click-button-140881.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\click-button-140881.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Pictures\BackArrow.png">
@@ -61,6 +73,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Pictures\RestartButtonHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\SoundOff.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\SoundOffHover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\SoundOn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Pictures\SoundOnHover.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

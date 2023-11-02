@@ -27,6 +27,7 @@ namespace Legpuzzel_ver1_Meindert
         public KiesPuzzelScherm(NaStartscherm nss, string PlayerName1, string PlayerName2) //public kiespuzzelscherm met de waardes die doorgegeven zijn van het vorige scherm
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             nastartscherm = nss; //Dit scherm vertellen dat het vorige scherm hetzelfde scherm is als het scherm waar de waardes vandaan komen
 
             this.PlayerName1 = PlayerName1; //de strings die in dit scherm zijn aangemaakt worden nu gelijk gesteld aan de strings van het vorige scherm zodat c# weet dat het eigenlijk dezelfde strings zijn

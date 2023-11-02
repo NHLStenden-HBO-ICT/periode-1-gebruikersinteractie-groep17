@@ -26,6 +26,7 @@ namespace Legpuzzel_ver1_Meindert
         public NaStartscherm(StartScherm ss, bool Moff)
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             startscherm = ss;
 
             this.Moff = Moff;

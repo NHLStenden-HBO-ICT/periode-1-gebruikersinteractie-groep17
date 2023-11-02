@@ -28,6 +28,7 @@ namespace Legpuzzel_ver1_Meindert
         public KiesFotoScherm(KiesPuzzelScherm kps, string PlayerName1, string PlayerName2, int PuzzelGrootte)
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             this.PlayerName1 = PlayerName1;
             this.PlayerName2 = PlayerName2;
             this.PuzzelGrootte = PuzzelGrootte;

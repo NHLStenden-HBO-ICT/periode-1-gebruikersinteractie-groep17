@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,7 @@ namespace Legpuzzel_ver1_Meindert
         public PuzzelScherm(KiesFotoScherm kfs, string PlayerName1, string PlayerName2, int PuzzelGrootte, int puzzelKeuze)
         {
             InitializeComponent();
+            this.WindowState = WindowState.Maximized;
             this.PlayerName1 = PlayerName1;
             this.PlayerName2 = PlayerName2;
             this.PuzzelGrootte = PuzzelGrootte;
@@ -69,7 +71,6 @@ namespace Legpuzzel_ver1_Meindert
             {
                 sourceImage = new BitmapImage(new Uri("Pictures/aappuzzel.png", UriKind.Relative));
             }
-
             int rows = PuzzelGrootte; // Define the number of rows and columns for puzzle, these are defined by the valuble "Puzzelgrootte" which is passed through form the previous window
             int columns = PuzzelGrootte;
 
@@ -90,11 +91,9 @@ namespace Legpuzzel_ver1_Meindert
 
                     // Calculate the correct position for each piece
              
-                    double correctLeft = j * pieceWidth;
-                    double correctTop = i * pieceHeight;
-
+                    double correctLeft =j * pieceWidth + 200;
+                    double correctTop =i * pieceHeight + 200;
                     correctPositions.Add(pieceImage.Name, new Point(correctLeft, correctTop));
-
 
                     // Initialize the solved status
                     SolvedPieces[pieceImage.Name] = false;
@@ -109,14 +108,15 @@ namespace Legpuzzel_ver1_Meindert
                     pieceImage.MouseLeftButtonUp += DraggableElement_MouseLeftButtonUp;
 
                     // Add the piece to the canvas
-                    Canvas.SetLeft(pieceImage, j * pieceWidth +200 );
-                    Canvas.SetTop(pieceImage, i * pieceHeight);
+                    Canvas.SetLeft(pieceImage, j * pieceWidth + 1000 );
+                    Canvas.SetTop(pieceImage, i * pieceHeight + 100);
                     pieceImage.RenderTransform = new TranslateTransform(); // Ensure the RenderTransform is set
                     PuzzleCanvas.Children.Add(pieceImage);
 
                     puzzlePieces[i, j] = pieceImage;
                 }
             }
+
         }
 
 
@@ -163,7 +163,7 @@ namespace Legpuzzel_ver1_Meindert
             }
 
         }
-
+        
 
         private void DraggableElement_MouseLeftButtonUp(object sender, MouseButtonEventArgs e) //if left mouse button stops pressing while on element
         {
@@ -220,10 +220,9 @@ namespace Legpuzzel_ver1_Meindert
         }
 
             private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            // Set the window to fullscreen mode
-            this.WindowState = WindowState.Maximized;
-        }
+            {
+            
+            }
     }
 }
 

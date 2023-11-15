@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using Point = System.Windows.Point;
 
 namespace Legpuzzel_ver1_Meindert
 {
@@ -92,7 +93,7 @@ namespace Legpuzzel_ver1_Meindert
                     // Calculate the correct position for each piece
              
                     double correctLeft =j * pieceWidth + 200;
-                    double correctTop =i * pieceHeight + 200;
+                    double correctTop =i * pieceHeight;
                     correctPositions.Add(pieceImage.Name, new Point(correctLeft, correctTop));
 
                     // Initialize the solved status
@@ -108,8 +109,8 @@ namespace Legpuzzel_ver1_Meindert
                     pieceImage.MouseLeftButtonUp += DraggableElement_MouseLeftButtonUp;
 
                     // Add the piece to the canvas
-                    Canvas.SetLeft(pieceImage, j * pieceWidth + 1000 );
-                    Canvas.SetTop(pieceImage, i * pieceHeight + 100);
+                    Canvas.SetLeft(pieceImage, j * pieceWidth + 400 );
+                    Canvas.SetTop(pieceImage, i * pieceHeight);
                     pieceImage.RenderTransform = new TranslateTransform(); // Ensure the RenderTransform is set
                     PuzzleCanvas.Children.Add(pieceImage);
 
